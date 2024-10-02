@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+.nav-header {
+  height: 64px;
+}
+
+.nav-list-item {
+  display: flex;
+  direction: row;
+  gap: 6px;
+  color: #a7b1c2;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+
+  .nav-typography {
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+.nav-list-selected {
+  color: white;
+}

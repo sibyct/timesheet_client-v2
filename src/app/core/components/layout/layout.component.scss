@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  height: 100%;
+  --mat-sidenav-container-shape: 0px;
+}
+
+.layout-nav-container {
+  height: 100%;
+}
+
+.layout-nav-item-container {
+  width: 200px;
+  border-right: 1px solid #7f7f7f;
+  background-color: #273a4a;
+}
