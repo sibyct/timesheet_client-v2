@@ -28,19 +28,27 @@ import { CommonModule } from '@angular/common';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  protected readonly loginForm: FormGroup;
+  protected loginForm!: FormGroup;
   protected hide = true; // to toggle password visibility
 
   constructor(private fb: FormBuilder) {
+    this.buildLoginForm();
+  }
+
+  private buildLoginForm() {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.getRawValue();
+  protected onSubmit() {
+    if (!this.loginForm.valid) {
+      return;
     }
+
+    const { username, password } = this.loginForm.getRawValue();
+    console.log('username', username);
+    console.log('password', password);
   }
 }
