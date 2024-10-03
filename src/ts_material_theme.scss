@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$timesheet-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$blue-palette,
+    ),
+  )
+);
+
+html {
+  @include mat.core-theme($timesheet-theme);
+  @include mat.all-component-themes($timesheet-theme);
+}

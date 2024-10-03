@@ -1,24 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 //  "@angular/material/prebuilt-themes/azure-blue.css",
-
-@use "sass:map";
-@use "@angular/material" as mat;
-
-@include mat.core();
-
-$timesheet-theme: mat.define-theme(
-  (
-    color: (
-      theme-type: light,
-      primary: mat.$blue-palette,
-    ),
-  )
-);
-
-html {
-  @include mat.core-theme($timesheet-theme);
-  @include mat.all-component-themes($timesheet-theme);
-}
+@import "ts_material_theme.scss";
 
 html,
 body {

@@ -29,7 +29,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["assets/styles/varibles.css", "src/styles.scss"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
