@@ -28,8 +28,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  loginForm: FormGroup;
-  hide = true; // to toggle password visibility
+  protected readonly loginForm: FormGroup;
+  protected hide = true; // to toggle password visibility
 
   constructor(private fb: FormBuilder) {
     this.loginForm = this.fb.group({
@@ -40,10 +40,7 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      const username = this.loginForm.get('username')?.value;
-      const password = this.loginForm.get('password')?.value;
-      console.log('Login successful with:', username, password);
-      // Add your login logic here (e.g., API call)
+      const { username, password } = this.loginForm.getRawValue();
     }
   }
 }
